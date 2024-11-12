@@ -1,0 +1,28 @@
+
+JUnit 3 是一个早期版本的单元测试框架，虽然现在大多数项目已经迁移到 JUnit 4 或更高版本，但了解 JUnit 3 的基本用法仍然有助于理解和维护旧代码。以下是一些 JUnit 3 的基本用法：
+基本结构
+继承 TestCase 类：
+每个测试类都需要继承 junit.framework.TestCase 类。
+测试方法必须以 test 开头。
+构造函数：
+可以在构造函数中传递测试方法的名称。
+初始化和清理方法：
+使用 setUp() 方法进行测试前的初始化。
+使用 tearDown() 方法进行测试后的清理。
+
+
+关键点
+继承 TestCase 类：
+每个测试类都必须继承 junit.framework.TestCase 类。
+测试方法命名：
+测试方法必须以 test 开头，例如 testMethod1()。
+构造函数：
+可以在构造函数中传递测试方法的名称，但这不是必需的。
+初始化和清理方法：
+setUp() 方法在每个测试方法执行前被调用。
+tearDown() 方法在每个测试方法执行后被调用。
+断言方法：
+使用 assertEquals、assertTrue、assertFalse 等断言方法来验证测试结果。
+运行测试
+使用测试套件：
+可以使用 TestSuite 将多个测试类组合在一起运行。
