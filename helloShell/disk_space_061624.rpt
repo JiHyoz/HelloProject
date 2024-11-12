@@ -1,0 +1,16 @@
+Top Ten Disk Space Usage
+for /var/log /home Directories
+
+The /var/log Directory:
+1:	24584	/var/log/journal/aecdc0a3e1124af9b596b1102bd4d497
+2:	928	/var/log
+3:	88	/var/log/installer
+4:	44	/var/log/apt
+5:	20	/var/log/installer/block
+6:	8	/var/log/unattended-upgrades
+7:	4	/var/log/private
+8:	4	/var/log/journal
+9:	4	/var/log/dist-upgrade
+
+The /home Directory:
+1:	4	/home
