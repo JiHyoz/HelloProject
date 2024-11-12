@@ -1,0 +1,27 @@
+【Oracle性能调优】
+
+
+【执行计划使用】
+**** explain plan for SQL语句;
+**** select * from table(DBMS_xplan.display());
+
+【执行计划输出参数解释】
+**** Plan hash value 是该语句的哈希值。SQL 语句和执行计划会存储在库缓存中，哈希值相同的语句可以重用已有的执行计划，也就是软解析;
+**** Id 是一个序号，但不代表执行的顺序。执行的顺序按照缩进来判断，缩进越多的越先执行，同样缩进的从上至下执行。Id 前面的星号表示使用了谓词判断，参考下面的 Predicate Information;
+**** Operation 表示当前的操作，也就是如何访问表的数据、如何实现表的连接、如何进行排序操作等;
+**** Name 显示了访问的表名、索引名或者子查询等，前提是当前操作涉及到了这些对象;
+**** Rows 是 Oracle 估计的当前操作返回的行数，也叫基数(Cardinality);
+**** Bytes 是 Oracle 估计的当前操作涉及的数据量
+**** Cost (%CPU) 是 Oracle 计算执行该操作所需的代价;
+**** Time 是 Oracle 估计执行该操作所需的时间;
+**** Predicate Information 显示与 Id 相关的谓词信息。access 是访问条件，影响到数据的访问方式(扫描表还是通过索引);filter 是过滤条件，获取数据后根据该条件进行过滤;
+
+【】
+
+
+
+
+
+【参考链接】
+https://www.cnblogs.com/mzq123/p/13156390.html
+https://blog.csdn.net/u014427391/article/details/89604262
